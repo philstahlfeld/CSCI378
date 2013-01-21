@@ -19,11 +19,18 @@
 @synthesize display;
 @synthesize userIsInTheMiddleOfEnteringANumber;
 @synthesize brain = _brain;
+@synthesize history = _history;
 
 - (CalculatorBrain *)brain{
     if(!_brain) _brain = [[CalculatorBrain alloc] init];
     return _brain;
 }
+
+
+- (void) addToHistory:(NSString *) itemToAdd{
+    self.history.text = [self.history.text stringByAppendingString:itemToAdd];
+}
+
 
 - (IBAction)digitPressed:(UIButton *)sender {
     NSString *digit = sender.currentTitle;
@@ -35,11 +42,14 @@
         userIsInTheMiddleOfEnteringANumber = YES;
     }
     
+    [self addToHistory:digit];
+    
 }
 
 - (IBAction)enterPressed {
     [self.brain pushOperand:[self.display.text doubleValue]];
     self.userIsInTheMiddleOfEnteringANumber = NO;
+    [self addToHistory:@" "];
 }
 
 
@@ -50,9 +60,26 @@
     }
     
     NSString *operation = [sender currentTitle];
+    
+    [self addToHistory:[NSString stringWithFormat:@"%@ ", operation]];
+    
     double result = [self.brain performOperation:operation];
     self.display.text = [NSString stringWithFormat:@"%g",result];
 }
+- (IBAction)clearDisplay {
+    self.history.text = @"";
+    self.display.text = @"0";
+    [self.brain clearHistory];
+}
 
+- (IBAction)decimalPressed {
+    
+    [self addToHistory:@"."];
+    
+    NSRange range = [self.display.text rangeOfString:@"."];
+    if (range.location == NSNotFound) {
+        self.display.text = [self.display.text stringByAppendingString:@"."];
+    }
+}
 
 @end
