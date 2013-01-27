@@ -12,6 +12,7 @@
 @interface CalculatorViewController ()
 @property (nonatomic) BOOL userIsInTheMiddleOfEnteringANumber;
 @property (nonatomic, strong) CalculatorBrain *brain;
+@property (nonatomic, strong) NSDictionary *variableValues;
 @end
 
 @implementation CalculatorViewController
@@ -20,10 +21,23 @@
 @synthesize userIsInTheMiddleOfEnteringANumber;
 @synthesize brain = _brain;
 @synthesize history = _history;
+@synthesize variableValues = _variableValues;
+@synthesize variablesUsed = _variablesUsed;
 
 - (CalculatorBrain *)brain{
     if(!_brain) _brain = [[CalculatorBrain alloc] init];
     return _brain;
+}
+
+- (NSDictionary *) variableValues{
+    NSMutableArray *objects = [[NSMutableArray alloc] init];
+    [objects addObject:[NSNumber numberWithInt:5]];
+    
+    NSMutableArray *keys = [[NSMutableArray alloc] init];
+    [keys addObject:@"x"];
+    _variableValues = [[NSDictionary alloc] initWithObjects:objects forKeys:keys];
+    
+    return _variableValues;
 }
 
 
@@ -46,6 +60,7 @@
     
 }
 
+
 - (IBAction)enterPressed {
     [self.brain pushOperand:[self.display.text doubleValue]];
     self.userIsInTheMiddleOfEnteringANumber = NO;
@@ -63,13 +78,18 @@
     
     [self addToHistory:[NSString stringWithFormat:@"%@ ", operation]];
     
-    double result = [self.brain performOperation:operation];
+    [self.brain pushVariable:operation];
+    double result = [CalculatorBrain runProgram:self.brain.program usingVariableValues:self.variableValues];//[self.brain performOperation:operation];
     self.display.text = [NSString stringWithFormat:@"%g",result];
+    self.variablesUsed.text = [self.brain variablesUsedInProgram:self.variableValues];
 }
+
 - (IBAction)clearDisplay {
+    [self.brain clearHistory];
     self.history.text = @"";
     self.display.text = @"0";
-    [self.brain clearHistory];
+    self.variablesUsed.text = [self.brain variablesUsedInProgram:self.variableValues];
+    
 }
 
 - (IBAction)decimalPressed {
