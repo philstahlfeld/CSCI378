@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="duM-tm-eLy">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Calculator View Controller-->
+        <!--Calculator View Controller - Calculator-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="CalculatorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCs-eY-oxV">
@@ -326,9 +326,9 @@
                                     <action selector="actionPressed:" destination="2" eventType="touchUpInside" id="d1Y-FA-Jzf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyZ-Qg-dpn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9d-0E-L2L">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="y">
+                                <state key="normal" title="Graph">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -336,33 +336,22 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="actionPressed:" destination="2" eventType="touchUpInside" id="mfO-y9-Beq"/>
+                                    <segue destination="oeT-gG-EGu" kind="push" identifier="ShowGraph" id="cLJ-EC-WNP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQ5-qA-nMI">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="3hQ-8Y-LzE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jjC-IK-mxw" firstAttribute="leading" secondItem="jQo-NP-qnm" secondAttribute="leading" type="default" id="0UB-xu-OlX"/>
-                            <constraint firstItem="uyZ-Qg-dpn" firstAttribute="baseline" secondItem="pPz-KH-Kpb" secondAttribute="baseline" type="default" id="0ii-AI-6yp"/>
-                            <constraint firstItem="YQ5-qA-nMI" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="1V8-ec-VRR"/>
                             <constraint firstItem="y8z-oE-zdV" firstAttribute="leading" secondItem="PXr-l9-3fE" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="1aQ-VI-PGN"/>
                             <constraint firstItem="y8z-oE-zdV" firstAttribute="baseline" secondItem="PXr-l9-3fE" secondAttribute="baseline" type="default" id="2eH-Sj-cEv"/>
                             <constraint firstItem="nLa-zC-bAs" firstAttribute="leading" secondItem="XWk-Sm-8K4" secondAttribute="leading" type="default" id="3XS-SK-G7Y"/>
+                            <constraint firstItem="eCs-eY-oxV" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="3ar-IE-SAd"/>
                             <constraint firstItem="cA6-6K-gJm" firstAttribute="baseline" secondItem="q8G-3Y-0JX" secondAttribute="baseline" type="default" id="3jP-wW-c5d"/>
-                            <constraint firstItem="uyZ-Qg-dpn" firstAttribute="trailing" secondItem="jjC-IK-mxw" secondAttribute="trailing" type="default" id="4ym-rC-oNR"/>
                             <constraint firstItem="nLa-zC-bAs" firstAttribute="trailing" secondItem="XWk-Sm-8K4" secondAttribute="trailing" type="default" id="51A-cf-f7w"/>
                             <constraint firstItem="Co5-m3-9XS" firstAttribute="top" secondItem="zjL-q8-dXn" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5ge-NC-nZW"/>
                             <constraint firstItem="PXr-l9-3fE" firstAttribute="leading" secondItem="q8G-3Y-0JX" secondAttribute="leading" type="default" id="7pF-Ok-rdv"/>
                             <constraint firstItem="C7D-7e-SJ1" firstAttribute="leading" secondItem="PXr-l9-3fE" secondAttribute="leading" type="default" id="8Em-io-NU5"/>
-                            <constraint firstItem="nLa-zC-bAs" firstAttribute="trailing" secondItem="YQ5-qA-nMI" secondAttribute="trailing" type="default" id="8qC-PK-rN0"/>
                             <constraint firstItem="9PF-iG-bMf" firstAttribute="leading" secondItem="dEm-7Z-qrw" secondAttribute="leading" type="default" id="AZI-xV-RMB"/>
                             <constraint firstItem="jjC-IK-mxw" firstAttribute="baseline" secondItem="Tw5-Db-DUQ" secondAttribute="baseline" type="default" id="Axx-1D-ncR"/>
                             <constraint firstItem="9PF-iG-bMf" firstAttribute="baseline" secondItem="jQo-NP-qnm" secondAttribute="baseline" type="default" id="CBK-Yd-sH5"/>
@@ -392,28 +381,27 @@
                             <constraint firstItem="jjC-IK-mxw" firstAttribute="leading" secondItem="Tw5-Db-DUQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="QOw-C6-cSV"/>
                             <constraint firstItem="XWk-Sm-8K4" firstAttribute="trailing" secondItem="u61-Hk-4PQ" secondAttribute="trailing" type="default" id="Qjz-6F-nCm"/>
                             <constraint firstItem="C7D-7e-SJ1" firstAttribute="leading" secondItem="5vF-PU-B37" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Qsf-At-EBC"/>
-                            <constraint firstItem="uyZ-Qg-dpn" firstAttribute="leading" secondItem="jjC-IK-mxw" secondAttribute="leading" type="default" id="SDm-3A-wdj"/>
                             <constraint firstItem="eCs-eY-oxV" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="SUS-D5-rCb"/>
                             <constraint firstItem="Inf-bb-K2w" firstAttribute="leading" secondItem="wWE-8i-1Kr" secondAttribute="leading" type="default" id="VeK-pJ-ryF"/>
+                            <constraint firstItem="L9d-0E-L2L" firstAttribute="centerX" secondItem="Ird-KN-Cq8" secondAttribute="centerX" type="default" id="Y7W-pX-U0I"/>
                             <constraint firstItem="dV8-94-u6N" firstAttribute="top" secondItem="5vF-PU-B37" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Zhu-Xy-nmo"/>
                             <constraint firstItem="C7D-7e-SJ1" firstAttribute="baseline" secondItem="5vF-PU-B37" secondAttribute="baseline" type="default" id="aBr-tv-upE"/>
                             <constraint firstItem="Tw5-Db-DUQ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="acA-ry-giw"/>
-                            <constraint firstItem="uyZ-Qg-dpn" firstAttribute="baseline" secondItem="Ecb-3G-poF" secondAttribute="baseline" type="default" id="bW7-xV-bR4"/>
                             <constraint firstItem="wWE-8i-1Kr" firstAttribute="trailing" secondItem="Inf-bb-K2w" secondAttribute="trailing" type="default" id="baI-9j-B4h"/>
                             <constraint firstItem="dEm-7Z-qrw" firstAttribute="baseline" secondItem="C7D-7e-SJ1" secondAttribute="baseline" type="default" id="bpT-6L-3TQ"/>
+                            <constraint firstItem="L9d-0E-L2L" firstAttribute="baseline" secondItem="Ecb-3G-poF" secondAttribute="baseline" type="default" id="c3b-r5-MGq"/>
                             <constraint firstItem="u61-Hk-4PQ" firstAttribute="leading" secondItem="dEm-7Z-qrw" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="dGf-SZ-O5u"/>
+                            <constraint firstItem="pPz-KH-Kpb" firstAttribute="trailing" secondItem="Tw5-Db-DUQ" secondAttribute="trailing" type="default" id="dbo-7H-upR"/>
                             <constraint firstItem="nLa-zC-bAs" firstAttribute="leading" secondItem="Ird-KN-Cq8" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="fOZ-Om-Ij9"/>
                             <constraint firstItem="5vF-PU-B37" firstAttribute="top" secondItem="Co5-m3-9XS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gXI-KV-71z"/>
                             <constraint firstItem="TWm-BR-TG2" firstAttribute="trailing" secondItem="eCs-eY-oxV" secondAttribute="trailing" type="default" id="hjx-9C-2is"/>
+                            <constraint firstItem="L9d-0E-L2L" firstAttribute="baseline" secondItem="pPz-KH-Kpb" secondAttribute="baseline" type="default" id="iGk-E9-zhz"/>
                             <constraint firstItem="u61-Hk-4PQ" firstAttribute="trailing" secondItem="Inf-bb-K2w" secondAttribute="trailing" type="default" id="iqe-0Y-MVJ"/>
-                            <constraint firstAttribute="bottom" secondItem="YQ5-qA-nMI" secondAttribute="bottom" constant="14" id="jV1-bI-Dgx"/>
                             <constraint firstItem="zjL-q8-dXn" firstAttribute="top" secondItem="eCs-eY-oxV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kLf-aY-KPx"/>
-                            <constraint firstItem="YQ5-qA-nMI" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kQi-uX-SPO"/>
                             <constraint firstItem="jQo-NP-qnm" firstAttribute="leading" secondItem="C7D-7e-SJ1" secondAttribute="leading" type="default" id="li5-x8-fZ4"/>
                             <constraint firstItem="XWk-Sm-8K4" firstAttribute="leading" secondItem="9PF-iG-bMf" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="nK4-Zc-Bot"/>
                             <constraint firstItem="u61-Hk-4PQ" firstAttribute="baseline" secondItem="dEm-7Z-qrw" secondAttribute="baseline" type="default" id="ney-ZA-cAi"/>
                             <constraint firstItem="TWm-BR-TG2" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="nqb-hd-wSq"/>
-                            <constraint firstItem="uyZ-Qg-dpn" firstAttribute="leading" secondItem="pPz-KH-Kpb" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="oZ1-L7-TIT"/>
                             <constraint firstItem="cA6-6K-gJm" firstAttribute="leading" secondItem="q8G-3Y-0JX" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pQH-1Y-e3L"/>
                             <constraint firstItem="dV8-94-u6N" firstAttribute="baseline" secondItem="jQo-NP-qnm" secondAttribute="baseline" type="default" id="piW-4V-Cpy"/>
                             <constraint firstAttribute="trailing" secondItem="Ecb-3G-poF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pmG-LG-Er5"/>
@@ -426,13 +414,60 @@
                             <constraint firstItem="jQo-NP-qnm" firstAttribute="leading" secondItem="dV8-94-u6N" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ytj-Fh-Vv8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Calculator" id="bqH-Ak-fci"/>
                     <connections>
                         <outlet property="display" destination="eCs-eY-oxV" id="emr-gH-gnh"/>
                         <outlet property="history" destination="TWm-BR-TG2" id="4to-iq-oUF"/>
-                        <outlet property="variablesUsed" destination="YQ5-qA-nMI" id="3gf-wS-URr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831" y="130"/>
+        </scene>
+        <!--Graph View Controller - Grapher-->
+        <scene sceneID="5xD-md-fS4">
+            <objects>
+                <viewController id="oeT-gG-EGu" customClass="GraphViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IWk-dh-GOE">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="szB-If-2Uf" customClass="GraphView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="szB-If-2Uf" firstAttribute="leading" secondItem="IWk-dh-GOE" secondAttribute="leading" type="default" id="KkU-zG-hxD"/>
+                            <constraint firstItem="szB-If-2Uf" firstAttribute="top" secondItem="IWk-dh-GOE" secondAttribute="top" type="default" id="VZA-Cm-ULq"/>
+                            <constraint firstItem="szB-If-2Uf" firstAttribute="trailing" secondItem="IWk-dh-GOE" secondAttribute="trailing" type="default" id="kv4-YN-4sB"/>
+                            <constraint firstItem="szB-If-2Uf" firstAttribute="bottom" secondItem="IWk-dh-GOE" secondAttribute="bottom" type="default" id="xXq-In-ge2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Grapher" id="22l-rP-k7U"/>
+                    <connections>
+                        <outlet property="graphView" destination="szB-If-2Uf" id="hFo-61-Rzh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XvK-bm-haM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1242" y="130"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xJw-gP-kCK">
+            <objects>
+                <navigationController id="duM-tm-eLy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="POV-8C-dT3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="pAo-Ck-ipP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X84-b1-wUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="130"/>
         </scene>
@@ -441,11 +476,21 @@
         <class className="CalculatorViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CalculatorViewController.h"/>
             <relationships>
-                <relationship kind="action" name="actionPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="digitPressed:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="display" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="history" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="variablesUsed" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GraphView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dataSource"/>
+            </relationships>
+        </class>
+        <class className="GraphViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="graphView" candidateClass="GraphView"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
