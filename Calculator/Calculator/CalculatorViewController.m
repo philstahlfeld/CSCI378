@@ -30,6 +30,35 @@
     return _brain;
 }
 
+- (void) awakeFromNib{
+    [super awakeFromNib];
+    self.splitViewController.delegate = self;
+    self.title = @"Calculator";
+}
+
+- (BOOL) splitViewController:(UISplitViewController *)svc
+    shouldHideViewController:(UIViewController *)vc
+               inOrientation:(UIInterfaceOrientation)orientation
+{
+    return UIInterfaceOrientationIsPortrait(orientation);
+}
+
+- (void) splitViewController:(UISplitViewController *)svc
+      willHideViewController:(UIViewController *)aViewController
+           withBarButtonItem:(UIBarButtonItem *)barButtonItem
+        forPopoverController:(UIPopoverController *)pc
+{
+    barButtonItem.title = self.title;
+    [[self.splitViewController.viewControllers lastObject] setSplitViewBarButtonItem:barButtonItem];
+}
+
+- (void) splitViewController:(UISplitViewController *)svc
+      willShowViewController:(UIViewController *)aViewController
+   invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
+{
+     [[self.splitViewController.viewControllers lastObject] setSplitViewBarButtonItem:nil];
+}
+
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"ShowGraph"]){
         [segue.destinationViewController setProgram:self.brain.program];
@@ -97,6 +126,21 @@
     self.display.text = @"0";
     self.variablesUsed.text = [self.brain variablesUsedInProgram:self.variableValues];
     
+}
+
+- (GraphViewController *) splitViewGraphViewController{
+    id gvc = [self.splitViewController.viewControllers lastObject];
+    
+    if (![gvc isKindOfClass:[GraphViewController class]])
+        gvc = nil;
+    
+    return gvc;
+}
+
+- (IBAction)graphPressed {
+    if ([self splitViewGraphViewController]){
+        [self splitViewGraphViewController].program = self.brain.program;
+    }
 }
 
 - (IBAction)decimalPressed {

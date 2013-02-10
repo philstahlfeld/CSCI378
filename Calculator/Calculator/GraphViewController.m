@@ -12,15 +12,31 @@
 
 @interface GraphViewController () <GraphViewDataSource>
 @property (nonatomic, weak) IBOutlet GraphView *graphView;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @end
 
 @implementation GraphViewController
 
 @synthesize graphView = _graphView;
 @synthesize program = _program;
+@synthesize toolbar = _toolbar;
+
+
+- (void) setSplitViewBarButtonItem:(UIBarButtonItem *)splitViewBarButtonItem{
+    NSMutableArray *toolbarItems = [self.toolbar.items mutableCopy];
+    
+    if(!splitViewBarButtonItem)
+        [toolbarItems removeAllObjects];
+    else
+        [toolbarItems insertObject:splitViewBarButtonItem atIndex:0];
+    
+    self.toolbar.items = toolbarItems;
+    [self.graphView setNeedsDisplay];
+}
 
 - (void) setProgram:(id)program{
     _program = program;
+    [self.graphView setNeedsDisplay];
 }
 
 - (void) setGraphView:(GraphView *)graphView{

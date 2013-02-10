@@ -13,4 +13,5 @@
 @property (nonatomic, readonly) id program;
 
 - (void) setProgram:(id)program;
+- (void) setSplitViewBarButtonItem: (UIBarButtonItem *) splitViewBarButtonItem;
 @end
