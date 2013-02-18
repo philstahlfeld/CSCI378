@@ -31,7 +31,7 @@
         [toolbarItems insertObject:splitViewBarButtonItem atIndex:0];
     
     self.toolbar.items = toolbarItems;
-    [self.graphView setNeedsDisplay];
+    
 }
 
 - (void) setProgram:(id)program{
