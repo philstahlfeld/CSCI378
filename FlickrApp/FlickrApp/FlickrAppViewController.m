@@ -27,14 +27,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)testButtonPressed {
-    NSArray *topPlaces = [FlickrFetcher topPlaces];
-    NSDictionary *place = [topPlaces objectAtIndex:0];
-    
-    NSArray *photosFromPlace = [FlickrFetcher photosInPlace:place maxResults:50];
    
-    NSDictionary *photoDict = [photosFromPlace objectAtIndex:0];
-
-    NSLog([@"Photo dict:" stringByAppendingString:[photoDict objectForKey:@"title"]]);
 }
 
 @end

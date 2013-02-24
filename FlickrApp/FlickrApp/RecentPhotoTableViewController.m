@@ -1,24 +1,22 @@
 //
-//  PhotoTableViewController.m
+//  RecentPhotoTableViewController.m
 //  FlickrApp
 //
-//  Created by Phil Stahlfeld on 2/17/13.
+//  Created by Phil Stahlfeld on 2/24/13.
 //  Copyright (c) 2013 Phil Stahlfeld. All rights reserved.
 //
 
-#import "PhotoTableViewController.h"
+#import "RecentPhotoTableViewController.h"
 #import "FlickrFetcher.h"
-#import "ImageViewController.h"
 
-@interface PhotoTableViewController ()
+@interface RecentPhotoTableViewController ()
+@property (nonatomic, strong) NSArray *recentPhotoDicts;
 @property (nonatomic, strong) UIImage *chosenImage;
-@property (nonatomic, strong) NSDictionary *chosenPhotoDict;
 
 @end
 
-@implementation PhotoTableViewController
-
-@synthesize photosFromLocation = _photosFromLocation;
+@implementation RecentPhotoTableViewController
+@synthesize recentPhotoDicts = _recentPhotoDicts;
 @synthesize chosenImage = _chosenImage;
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -29,16 +27,28 @@
     }
     return self;
 }
+#define RECENT_KEY @"PhotoTableViewController.Recent"
+- (NSArray *) recentPhotoDicts{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _recentPhotoDicts = [defaults objectForKey:RECENT_KEY];
+    return _recentPhotoDicts;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,18 +60,19 @@
 #pragma mark - Table view data source
 
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.photosFromLocation count];
+    return [self.recentPhotoDicts count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Photo From Location";
+    static NSString *CellIdentifier = @"Recent Photo Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    NSDictionary *photoDict = [self.photosFromLocation objectAtIndex:indexPath.row];
-    
+    NSUInteger reverseIndex = [self.recentPhotoDicts count] - indexPath.row - 1;
+    NSDictionary *photoDict = [self.recentPhotoDicts objectAtIndex:reverseIndex];
     cell.textLabel.text = [photoDict objectForKey:@"title"];
     
     return cell;
@@ -110,34 +121,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-    
-    NSDictionary *photoDict = [self.photosFromLocation objectAtIndex:indexPath.row];
-    self.chosenPhotoDict = photoDict;
+    NSUInteger reverseIndex = [self.recentPhotoDicts count] - indexPath.row - 1;
+    NSDictionary *photoDict = [self.recentPhotoDicts objectAtIndex:reverseIndex];
     NSURL *photoURL = [FlickrFetcher urlForPhoto:photoDict format:FlickrPhotoFormatLarge];
     NSData *imageURLData = [NSData dataWithContentsOfURL:photoURL];
     self.chosenImage = [UIImage imageWithData:imageURLData];
-    [self performSegueWithIdentifier:@"Show Image" sender:self];
+    [self performSegueWithIdentifier:@"Show Recent Photo" sender:self];
 }
 
-#define RECENT_KEY @"PhotoTableViewController.Recent"
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"Show Image"]){
+    if([segue.identifier isEqualToString:@"Show Recent Photo"]){
         [segue.destinationViewController setImage:self.chosenImage];
     }
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSMutableArray *recent = [[defaults objectForKey:RECENT_KEY] mutableCopy];
-    if(!recent) recent = [NSMutableArray array];
-    [recent addObject:self.chosenPhotoDict];
-    [defaults setObject:recent forKey:RECENT_KEY];
-    [defaults synchronize];
-    
 }
 
 @end

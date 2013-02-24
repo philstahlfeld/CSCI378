@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B50B80C16DAADB100D96E7E /* RecentPhotoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B50B80B16DAADB100D96E7E /* RecentPhotoTableViewController.m */; };
 		7B6B315916D2B01500BF9402 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6B315816D2B01500BF9402 /* ImageViewController.m */; };
 		7B6DD1A416D1E6A3006F35E2 /* PhotoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6DD1A316D1E6A3006F35E2 /* PhotoTableViewController.m */; };
 		7BDC417916D1765B00745CE0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BDC417816D1765B00745CE0 /* UIKit.framework */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B50B80A16DAADB100D96E7E /* RecentPhotoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentPhotoTableViewController.h; sourceTree = "<group>"; };
+		7B50B80B16DAADB100D96E7E /* RecentPhotoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentPhotoTableViewController.m; sourceTree = "<group>"; };
 		7B6B315716D2B01500BF9402 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		7B6B315816D2B01500BF9402 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		7B6DD1A216D1E6A3006F35E2 /* PhotoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTableViewController.h; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 		7BDC417E16D1765B00745CE0 /* FlickrApp */ = {
 			isa = PBXGroup;
 			children = (
+				7B50B80A16DAADB100D96E7E /* RecentPhotoTableViewController.h */,
+				7B50B80B16DAADB100D96E7E /* RecentPhotoTableViewController.m */,
 				7B6B315716D2B01500BF9402 /* ImageViewController.h */,
 				7B6B315816D2B01500BF9402 /* ImageViewController.m */,
 				7BDC41A116D1862600745CE0 /* TopPlacesTableViewController.h */,
@@ -207,6 +212,7 @@
 				7BDC41A316D1862600745CE0 /* TopPlacesTableViewController.m in Sources */,
 				7B6DD1A416D1E6A3006F35E2 /* PhotoTableViewController.m in Sources */,
 				7B6B315916D2B01500BF9402 /* ImageViewController.m in Sources */,
+				7B50B80C16DAADB100D96E7E /* RecentPhotoTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
