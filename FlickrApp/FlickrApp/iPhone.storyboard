@@ -20,7 +20,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1l3-7g-fLS">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1l3-7g-fLS">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,31 +53,31 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" minimumZoomScale="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hDW-dT-wZO">
+                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" minimumZoomScale="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hDW-dT-wZO">
                                 <subviews>
-                                    <imageView multipleTouchEnabled="YES" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="daK-hY-uuP">
+                                    <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="daK-hY-uuP">
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="455" id="NvK-QR-dMI"/>
-                                            <constraint firstAttribute="width" constant="320" id="gm7-so-rNc"/>
+                                            <constraint firstAttribute="height" constant="455" id="Nzm-HL-8E2"/>
+                                            <constraint firstAttribute="width" constant="320" id="Pjq-LF-EaK"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="daK-hY-uuP" firstAttribute="leading" secondItem="hDW-dT-wZO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Oz3-ow-SlA"/>
-                                    <constraint firstItem="daK-hY-uuP" firstAttribute="trailing" secondItem="hDW-dT-wZO" secondAttribute="trailing" type="default" id="YHm-8H-nOE"/>
-                                    <constraint firstItem="daK-hY-uuP" firstAttribute="bottom" secondItem="hDW-dT-wZO" secondAttribute="bottom" type="default" id="jrh-S4-Iij"/>
-                                    <constraint firstItem="daK-hY-uuP" firstAttribute="top" secondItem="hDW-dT-wZO" secondAttribute="top" constant="20" symbolic="YES" type="default" id="zvu-Uy-7ju"/>
+                                    <constraint firstItem="daK-hY-uuP" firstAttribute="trailing" secondItem="hDW-dT-wZO" secondAttribute="trailing" type="default" id="43V-Oq-dIH"/>
+                                    <constraint firstItem="daK-hY-uuP" firstAttribute="bottom" secondItem="hDW-dT-wZO" secondAttribute="bottom" type="default" id="EgK-xR-ahP"/>
+                                    <constraint firstItem="daK-hY-uuP" firstAttribute="top" secondItem="hDW-dT-wZO" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Uex-PQ-oBB"/>
+                                    <constraint firstItem="daK-hY-uuP" firstAttribute="leading" secondItem="hDW-dT-wZO" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Xis-3E-Smo"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hDW-dT-wZO" firstAttribute="bottom" secondItem="6K7-Ck-2mg" secondAttribute="bottom" type="default" id="EqA-Z5-ci4"/>
-                            <constraint firstItem="hDW-dT-wZO" firstAttribute="trailing" secondItem="6K7-Ck-2mg" secondAttribute="trailing" type="default" id="VSo-cy-lfQ"/>
-                            <constraint firstItem="hDW-dT-wZO" firstAttribute="top" secondItem="6K7-Ck-2mg" secondAttribute="top" constant="-20" id="lq9-OE-GlA"/>
-                            <constraint firstItem="hDW-dT-wZO" firstAttribute="leading" secondItem="6K7-Ck-2mg" secondAttribute="leading" constant="-20" id="orV-GL-DAj"/>
+                            <constraint firstItem="hDW-dT-wZO" firstAttribute="trailing" secondItem="6K7-Ck-2mg" secondAttribute="trailing" type="default" id="Kev-WR-gAk"/>
+                            <constraint firstItem="hDW-dT-wZO" firstAttribute="bottom" secondItem="6K7-Ck-2mg" secondAttribute="bottom" type="default" id="Lu2-BI-x08"/>
+                            <constraint firstItem="hDW-dT-wZO" firstAttribute="leading" secondItem="6K7-Ck-2mg" secondAttribute="leading" constant="-20" id="O2D-2N-byP"/>
+                            <constraint firstItem="hDW-dT-wZO" firstAttribute="top" secondItem="6K7-Ck-2mg" secondAttribute="top" constant="-20" id="Uqk-H2-8OJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2gK-jl-Y2K"/>
@@ -124,12 +125,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7A-5G-Zw3">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f7A-5G-Zw3">
+                                            <rect key="frame" x="10" y="2" width="38" height="22"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76d-Ld-b9f">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="76d-Ld-b9f">
+                                            <rect key="frame" x="10" y="24" width="47" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -169,7 +172,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olO-Gf-BJ4">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="olO-Gf-BJ4">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -201,26 +205,26 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" directionalLockEnabled="YES" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" indicatorStyle="black" minimumZoomScale="-10" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="FIg-rK-zHy">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" directionalLockEnabled="YES" bounces="NO" pagingEnabled="YES" indicatorStyle="black" minimumZoomScale="-10" maximumZoomScale="4" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIg-rK-zHy">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="3eL-Z5-icb"/>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="3eL-Z5-icb" firstAttribute="top" secondItem="FIg-rK-zHy" secondAttribute="top" constant="20" symbolic="YES" type="default" id="96l-bv-Cid"/>
-                                    <constraint firstAttribute="bottom" secondItem="3eL-Z5-icb" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="RAb-yX-cQ2"/>
-                                    <constraint firstItem="3eL-Z5-icb" firstAttribute="leading" secondItem="FIg-rK-zHy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="UFr-Ge-klI"/>
-                                    <constraint firstItem="3eL-Z5-icb" firstAttribute="centerX" secondItem="FIg-rK-zHy" secondAttribute="centerX" type="default" id="gee-Tb-hlt"/>
-                                    <constraint firstAttribute="trailing" secondItem="3eL-Z5-icb" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lae-IE-MIh"/>
-                                    <constraint firstItem="3eL-Z5-icb" firstAttribute="centerY" secondItem="FIg-rK-zHy" secondAttribute="centerY" type="default" id="rND-gP-05s"/>
+                                    <constraint firstAttribute="trailing" secondItem="3eL-Z5-icb" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="2uv-pv-z7I"/>
+                                    <constraint firstItem="3eL-Z5-icb" firstAttribute="centerX" secondItem="FIg-rK-zHy" secondAttribute="centerX" type="default" id="9Fd-B3-YO8"/>
+                                    <constraint firstItem="3eL-Z5-icb" firstAttribute="leading" secondItem="FIg-rK-zHy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="YbW-4I-c3h"/>
+                                    <constraint firstAttribute="bottom" secondItem="3eL-Z5-icb" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Yr0-YW-a9c"/>
+                                    <constraint firstItem="3eL-Z5-icb" firstAttribute="top" secondItem="FIg-rK-zHy" secondAttribute="top" constant="20" symbolic="YES" type="default" id="fxl-65-nQP"/>
+                                    <constraint firstItem="3eL-Z5-icb" firstAttribute="centerY" secondItem="FIg-rK-zHy" secondAttribute="centerY" type="default" id="kFX-mH-4I8"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FIg-rK-zHy" firstAttribute="centerX" secondItem="TZD-8X-5Rl" secondAttribute="centerX" type="default" id="LrX-Hp-KCs"/>
-                            <constraint firstItem="FIg-rK-zHy" firstAttribute="leading" secondItem="TZD-8X-5Rl" secondAttribute="leading" constant="-20" id="QeQ-hp-qfU"/>
-                            <constraint firstItem="FIg-rK-zHy" firstAttribute="centerY" secondItem="TZD-8X-5Rl" secondAttribute="centerY" type="default" id="gTX-0P-UYk"/>
-                            <constraint firstItem="FIg-rK-zHy" firstAttribute="top" secondItem="TZD-8X-5Rl" secondAttribute="top" constant="-20" id="xUY-H4-RVP"/>
+                            <constraint firstItem="FIg-rK-zHy" firstAttribute="centerY" secondItem="TZD-8X-5Rl" secondAttribute="centerY" type="default" id="NFa-dO-RSh"/>
+                            <constraint firstItem="FIg-rK-zHy" firstAttribute="centerX" secondItem="TZD-8X-5Rl" secondAttribute="centerX" type="default" id="Q0M-ey-vJ2"/>
+                            <constraint firstItem="FIg-rK-zHy" firstAttribute="leading" secondItem="TZD-8X-5Rl" secondAttribute="leading" constant="-20" id="U1T-pv-SST"/>
+                            <constraint firstItem="FIg-rK-zHy" firstAttribute="top" secondItem="TZD-8X-5Rl" secondAttribute="top" constant="-20" id="bQL-be-otL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1DU-Yw-Qzt"/>

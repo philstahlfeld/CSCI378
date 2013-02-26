@@ -36,8 +36,10 @@
     
     self.imageView.image = self.image;
     self.scrollView.contentSize = self.image.size;
-    self.imageView.frame = CGRectMake(0, 0, 20, 20);
+    self.scrollView.frame = CGRectMake(0, 0, 20, 20);
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

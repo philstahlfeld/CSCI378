@@ -24,10 +24,12 @@
 - (NSArray *)topPlaces{
     dispatch_queue_t downloadQueue = dispatch_queue_create("flickr downloader", NULL);
     dispatch_async(downloadQueue, ^{
-        if(! _topPlaces) _topPlaces = [FlickrFetcher topPlaces];
+        if(! _topPlaces){
+            _topPlaces = [FlickrFetcher topPlaces];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
         });
+        }
     });
     
     //NSLog(@"Returning top places");
