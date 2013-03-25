@@ -1,0 +1,327 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B4593AF16F78C8300B8841B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4593AE16F78C8300B8841B /* UIKit.framework */; };
+		7B4593B116F78C8300B8841B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4593B016F78C8300B8841B /* Foundation.framework */; };
+		7B4593B316F78C8300B8841B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4593B216F78C8300B8841B /* CoreGraphics.framework */; };
+		7B4593B916F78C8300B8841B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B4593B716F78C8300B8841B /* InfoPlist.strings */; };
+		7B4593BB16F78C8300B8841B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4593BA16F78C8300B8841B /* main.m */; };
+		7B4593BF16F78C8300B8841B /* Propane_ViewerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4593BE16F78C8300B8841B /* Propane_ViewerAppDelegate.m */; };
+		7B4593C116F78C8300B8841B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B4593C016F78C8300B8841B /* Default.png */; };
+		7B4593C316F78C8300B8841B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B4593C216F78C8300B8841B /* Default@2x.png */; };
+		7B4593C516F78C8300B8841B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B4593C416F78C8300B8841B /* Default-568h@2x.png */; };
+		7B4593C816F78C8300B8841B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B4593C616F78C8300B8841B /* MainStoryboard.storyboard */; };
+		7B4593CB16F78C8300B8841B /* Propane_ViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4593CA16F78C8300B8841B /* Propane_ViewerViewController.m */; };
+		7B4593D616F7B16400B8841B /* PropaneFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4593D516F7B16300B8841B /* PropaneFetcher.m */; };
+		7B4593D916F7B22600B8841B /* CapturesListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4593D816F7B22600B8841B /* CapturesListTableViewController.m */; };
+		7BCBD4B31700B91100C99580 /* ImagesInCaptureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBD4B21700B91100C99580 /* ImagesInCaptureTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7B4593AB16F78C8300B8841B /* ProPANE Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ProPANE Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B4593AE16F78C8300B8841B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7B4593B016F78C8300B8841B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7B4593B216F78C8300B8841B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7B4593B616F78C8300B8841B /* ProPANE Viewer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProPANE Viewer-Info.plist"; sourceTree = "<group>"; };
+		7B4593B816F78C8300B8841B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7B4593BA16F78C8300B8841B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7B4593BC16F78C8300B8841B /* ProPANE Viewer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProPANE Viewer-Prefix.pch"; sourceTree = "<group>"; };
+		7B4593BD16F78C8300B8841B /* Propane_ViewerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Propane_ViewerAppDelegate.h; sourceTree = "<group>"; };
+		7B4593BE16F78C8300B8841B /* Propane_ViewerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Propane_ViewerAppDelegate.m; sourceTree = "<group>"; };
+		7B4593C016F78C8300B8841B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7B4593C216F78C8300B8841B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7B4593C416F78C8300B8841B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7B4593C716F78C8300B8841B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		7B4593C916F78C8300B8841B /* Propane_ViewerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Propane_ViewerViewController.h; sourceTree = "<group>"; };
+		7B4593CA16F78C8300B8841B /* Propane_ViewerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Propane_ViewerViewController.m; sourceTree = "<group>"; };
+		7B4593D416F7B16300B8841B /* PropaneFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropaneFetcher.h; sourceTree = "<group>"; };
+		7B4593D516F7B16300B8841B /* PropaneFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropaneFetcher.m; sourceTree = "<group>"; };
+		7B4593D716F7B22600B8841B /* CapturesListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapturesListTableViewController.h; sourceTree = "<group>"; };
+		7B4593D816F7B22600B8841B /* CapturesListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapturesListTableViewController.m; sourceTree = "<group>"; };
+		7BCBD4B11700B91100C99580 /* ImagesInCaptureTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesInCaptureTableViewController.h; sourceTree = "<group>"; };
+		7BCBD4B21700B91100C99580 /* ImagesInCaptureTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesInCaptureTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B4593A816F78C8300B8841B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B4593AF16F78C8300B8841B /* UIKit.framework in Frameworks */,
+				7B4593B116F78C8300B8841B /* Foundation.framework in Frameworks */,
+				7B4593B316F78C8300B8841B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B4593A216F78C8300B8841B = {
+			isa = PBXGroup;
+			children = (
+				7B4593B416F78C8300B8841B /* ProPANE Viewer */,
+				7B4593AD16F78C8300B8841B /* Frameworks */,
+				7B4593AC16F78C8300B8841B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7B4593AC16F78C8300B8841B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B4593AB16F78C8300B8841B /* ProPANE Viewer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B4593AD16F78C8300B8841B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B4593AE16F78C8300B8841B /* UIKit.framework */,
+				7B4593B016F78C8300B8841B /* Foundation.framework */,
+				7B4593B216F78C8300B8841B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B4593B416F78C8300B8841B /* ProPANE Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				7B4593D716F7B22600B8841B /* CapturesListTableViewController.h */,
+				7B4593D816F7B22600B8841B /* CapturesListTableViewController.m */,
+				7B4593D416F7B16300B8841B /* PropaneFetcher.h */,
+				7B4593D516F7B16300B8841B /* PropaneFetcher.m */,
+				7B4593BD16F78C8300B8841B /* Propane_ViewerAppDelegate.h */,
+				7B4593BE16F78C8300B8841B /* Propane_ViewerAppDelegate.m */,
+				7B4593C616F78C8300B8841B /* MainStoryboard.storyboard */,
+				7B4593C916F78C8300B8841B /* Propane_ViewerViewController.h */,
+				7B4593CA16F78C8300B8841B /* Propane_ViewerViewController.m */,
+				7BCBD4B11700B91100C99580 /* ImagesInCaptureTableViewController.h */,
+				7BCBD4B21700B91100C99580 /* ImagesInCaptureTableViewController.m */,
+				7B4593B516F78C8300B8841B /* Supporting Files */,
+			);
+			path = "ProPANE Viewer";
+			sourceTree = "<group>";
+		};
+		7B4593B516F78C8300B8841B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B4593B616F78C8300B8841B /* ProPANE Viewer-Info.plist */,
+				7B4593B716F78C8300B8841B /* InfoPlist.strings */,
+				7B4593BA16F78C8300B8841B /* main.m */,
+				7B4593BC16F78C8300B8841B /* ProPANE Viewer-Prefix.pch */,
+				7B4593C016F78C8300B8841B /* Default.png */,
+				7B4593C216F78C8300B8841B /* Default@2x.png */,
+				7B4593C416F78C8300B8841B /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B4593AA16F78C8300B8841B /* ProPANE Viewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B4593CE16F78C8300B8841B /* Build configuration list for PBXNativeTarget "ProPANE Viewer" */;
+			buildPhases = (
+				7B4593A716F78C8300B8841B /* Sources */,
+				7B4593A816F78C8300B8841B /* Frameworks */,
+				7B4593A916F78C8300B8841B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ProPANE Viewer";
+			productName = "ProPANE Viewer";
+			productReference = 7B4593AB16F78C8300B8841B /* ProPANE Viewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B4593A316F78C8300B8841B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = "Propane Viewer";
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Phil Stahlfeld";
+			};
+			buildConfigurationList = 7B4593A616F78C8300B8841B /* Build configuration list for PBXProject "ProPANE Viewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7B4593A216F78C8300B8841B;
+			productRefGroup = 7B4593AC16F78C8300B8841B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B4593AA16F78C8300B8841B /* ProPANE Viewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B4593A916F78C8300B8841B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B4593B916F78C8300B8841B /* InfoPlist.strings in Resources */,
+				7B4593C116F78C8300B8841B /* Default.png in Resources */,
+				7B4593C316F78C8300B8841B /* Default@2x.png in Resources */,
+				7B4593C516F78C8300B8841B /* Default-568h@2x.png in Resources */,
+				7B4593C816F78C8300B8841B /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B4593A716F78C8300B8841B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B4593BB16F78C8300B8841B /* main.m in Sources */,
+				7B4593BF16F78C8300B8841B /* Propane_ViewerAppDelegate.m in Sources */,
+				7B4593CB16F78C8300B8841B /* Propane_ViewerViewController.m in Sources */,
+				7B4593D616F7B16400B8841B /* PropaneFetcher.m in Sources */,
+				7B4593D916F7B22600B8841B /* CapturesListTableViewController.m in Sources */,
+				7BCBD4B31700B91100C99580 /* ImagesInCaptureTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7B4593B716F78C8300B8841B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B4593B816F78C8300B8841B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7B4593C616F78C8300B8841B /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B4593C716F78C8300B8841B /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7B4593CC16F78C8300B8841B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		7B4593CD16F78C8300B8841B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7B4593CF16F78C8300B8841B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProPANE Viewer/ProPANE Viewer-Prefix.pch";
+				INFOPLIST_FILE = "ProPANE Viewer/ProPANE Viewer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7B4593D016F78C8300B8841B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProPANE Viewer/ProPANE Viewer-Prefix.pch";
+				INFOPLIST_FILE = "ProPANE Viewer/ProPANE Viewer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B4593A616F78C8300B8841B /* Build configuration list for PBXProject "ProPANE Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B4593CC16F78C8300B8841B /* Debug */,
+				7B4593CD16F78C8300B8841B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B4593CE16F78C8300B8841B /* Build configuration list for PBXNativeTarget "ProPANE Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B4593CF16F78C8300B8841B /* Debug */,
+				7B4593D016F78C8300B8841B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B4593A316F78C8300B8841B /* Project object */;
+}
